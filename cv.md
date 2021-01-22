@@ -16,7 +16,8 @@ experience.forEach(item => {
   experienceData += `</section>`;
 });
 ```
+-------------
 
-7.I have secondary education and 2 years taught at the university. Passed paid courses "epam js basic" and "itGid html for js developers".
+6. I have secondary education and 2 years taught at the university. Passed paid courses "epam js basic" and "itGid html for js developers".
 
-8.My english level is beginner
+7. My english level is beginner
