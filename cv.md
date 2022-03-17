@@ -33,3 +33,15 @@ function t10() {
 document.querySelector('.b-10').onclick = t10;
 ```
 ___
+## Education
+* 3 courses at BRU majoring in software engineering.
+* Course [HTML for JavaScript Developers](https://itgid.info/course/html).
+* Course [JavaScript v.2.0](https://itgid.info/course/javascript-2).
+* Training: Basic JavaScript with Personal Mentor (epam).
+___
+## Experience
+* 2 years in a local web studio.
+___
+## English
+[EPAM English test result](https://examinator.epam.com/Main/PersonalAssignments) **A1**
+Now I am taking Dmitry Kolesnikov's online courses. and also pass with [duolingo](https://www.duolingo.com/)
