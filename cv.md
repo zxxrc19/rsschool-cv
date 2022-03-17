@@ -20,3 +20,16 @@ ___
 * **GULP, WebPack**
 * **OpenCart**
 ___
+## Code examples
+```
+function t10() {
+    let a10 = { name: 'ivan', age: 15, sex: 1, id: 45 };
+    a10_res = '?';
+    for (let key in a10) {
+        a10_res += key + '=' + a10[key] + '&';
+    }
+    document.querySelector('.out-10').innerHTML = a10_res;
+}
+document.querySelector('.b-10').onclick = t10;
+```
+___
