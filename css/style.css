@@ -26,8 +26,7 @@ ul li a {
 }
 
 main {
-    max-width: 50%;
-    /* height: 100vh; */
+    max-width: 60%;
     margin: 0 auto;
     padding: 5px;
     background: rgb(112, 0, 255);
@@ -85,15 +84,13 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.78);
     padding: 10px;
     position: relative;
-    padding-top: 80px;
     margin-bottom: 30px;
 }
 
 .about__photo {
     display: block;
-    position: absolute;
-    top: -35%;
-    left: 35%;
+    margin: 0 auto;
+    margin-top: -80px;
 }
 
 .section__contact {
@@ -214,5 +211,17 @@ main {
 }
 
 .grid__skills img {
-    max-width: 50px;
+    max-width: 60px;
+}
+
+.icon-phone:before {
+    content: "\e942";
+}
+
+.icon-mobile:before {
+    content: "\e958";
+}
+
+.icon-clock:before {
+    content: "\e900";
 }
