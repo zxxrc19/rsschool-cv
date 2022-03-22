@@ -17,15 +17,16 @@
         <section class="section__left">
             <h1 class="title">Mikhail Zhukau</h1>
             <div class="section__about about">
-                <!-- <img src="img/photo.png" alt="" class="about__photo"> -->
+                <div class="about__photo-wrap"> <img src="img/photo.jpg" alt="" class="about__photo"></div>
+
                 <h3>About me</h3>
                 <p class="text">Quickly learn new areas of activity, master new skills. Able to withstand intensive work, including weekends (if necessary). My goal is to gain knowledge in the field of front-end development.
                 </p>
             </div>
             <div class="section__contact contact">
                 <a href="tel:+375295475372" class="contact__link">
-               +375 (29) 547-53-72
-            </a>
+                    +375 (29) 547-53-72
+                </a>
                 <a href="mailto:zxxrc19@gmail.com" class="contact__link">zxxrc19@gmail.com</a>
                 <a href="https://t.me/zxxrc" class="contact__link">Telegram</a>
                 <a href="https://github.com/zxxrc19/" class="contact__link">GitHub</a>
@@ -117,6 +118,25 @@
                 <img src="img/avacode.png" alt="avacode">
                 <img src="img/photoshop.jpg" alt="photoshop">
             </div>
+            <p class="skill__title">
+                Code examples
+            </p>
+            <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(51, 51, 51); color: rgb(255, 255, 255);">
+function t10() {
+    let a10 = { 
+        name: 'ivan', 
+        age: 15, 
+        sex: 1, 
+        id: 45 
+    };
+    a10_res = '?';
+    for (let key in a10) {
+        a10_res += key + '=' + a10[key] + '&';
+    }
+    document.querySelector('.out-10').innerHTML = a10_res;
+}
+document.querySelector('.b-10').onclick = t10;
+            </pre>
         </section>
     </main>
 </body>
