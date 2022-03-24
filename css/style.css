@@ -240,15 +240,16 @@ main {
 
 .code {
     max-width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     position: relative;
+    min-height: 250px;
 }
 
 code {
     width: 100%;
     overflow-x: scroll;
     position: absolute;
-    height: 400px;
+    height: 250px;
     display: block;
     top: 0;
     left: 0;
