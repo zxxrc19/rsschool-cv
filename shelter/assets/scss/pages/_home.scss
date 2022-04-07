@@ -1,15 +1,10 @@
 .main{
     background-image: url(../../assets/image/background.png);
     height: 908px;
-    max-width: 1280px;
-    margin: 0 auto;
-    &__container{
-        padding: 0 40px;
-    }
     &__body{
         display: flex;
         &-info{
-            margin-top: 187px;
+            margin-top: 224px;
             max-width: 460px;
         }
         &-image{
@@ -27,6 +22,29 @@
             @include paragraph-l;
             color: $dark-s;
             margin-top: 41px;
+        }
+    }
+}
+
+.about{
+    &__body{
+        display: flex;
+        justify-content: center;
+        padding-top: 80px;
+        padding-left: 175px;
+        padding-right: 180px;
+    }
+    &__info{
+        padding-left: 120px;  
+        padding-top: 15px;
+        &-title{
+            color: $dark-l;
+            margin-bottom: 24px;
+            line-height: 128%;
+        }
+        &-text{
+            margin-bottom: 25px;
+            color: $dark-xl;
         }
     }
 }

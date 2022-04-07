@@ -1,7 +1,7 @@
 .nav{
     display: flex;
     justify-content: space-between;
-    padding-top: 61px;
+    padding-top: 60px;
     height: 120px;
     &__logo{
         &-title{
@@ -11,7 +11,7 @@
         &-subtitle{
             @include logo_subtitle;
             color: $white;
-            margin-top: 8px;
+            margin-top: 9px;
             margin-left: 4px;
         }
     }
@@ -25,13 +25,14 @@
             @include paragraph-l;
             color: $dark-s ;
             text-decoration: none;
+            line-height: 160%;
             &:hover{
                 color: $light-s;
             }
             &.active{
                 color: $light-s;
                 border-bottom: 3px solid $primary;
-                padding-bottom: 3px;
+                padding-bottom: 4px;
             }
         }
         

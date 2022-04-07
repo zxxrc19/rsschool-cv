@@ -2,6 +2,24 @@ body{
     font-family: Georgia, Arial, serif;
 }
 
+._wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+._container{
+    padding: 0 40px;
+}
+
 h2{
     @include h2;
+}
+
+
+h3{
+    @include h3;
+}
+
+p{
+    @include paragraph-l;
 }

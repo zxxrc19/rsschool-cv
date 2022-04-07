@@ -9,8 +9,12 @@
   box-sizing: border-box;
 }
 
-p {
+p, h3, h2 {
   margin: 0;
+}
+
+button {
+  border-color: transparent;
 }
 
 html {
@@ -382,6 +386,15 @@ body {
   font-family: Georgia, Arial, serif;
 }
 
+._wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+._container {
+  padding: 0 40px;
+}
+
 h2 {
   font-family: "Georgia";
   font-size: 44px;
@@ -390,10 +403,27 @@ h2 {
   color: #C4C4C4;
 }
 
+h3 {
+  font-family: "Georgia";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #C4C4C4;
+}
+
+p {
+  font-family: "Arial";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #C4C4C4;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 61px;
+  padding-top: 60px;
   height: 120px;
 }
 .nav__logo-title {
@@ -413,7 +443,7 @@ h2 {
   letter-spacing: 0.1em;
   color: #C4C4C4;
   color: #ffffff;
-  margin-top: 8px;
+  margin-top: 9px;
   margin-left: 4px;
 }
 .nav__menu {
@@ -431,6 +461,7 @@ h2 {
   color: #C4C4C4;
   color: #CDCDCD;
   text-decoration: none;
+  line-height: 160%;
 }
 .nav__menu-link:hover {
   color: #FAFAFA;
@@ -438,12 +469,12 @@ h2 {
 .nav__menu-link.active {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 
 .button {
-  width: 208px;
-  height: 56px;
+  width: 207px;
+  height: 52px;
   background: #F1CDB3;
   border-radius: 100px;
   font-size: 17px;
@@ -452,23 +483,18 @@ h2 {
   color: #292929;
 }
 .main__body .button {
-  margin-top: 40px;
+  margin-top: 42px;
 }
 
 .main {
   background-image: url(../../assets/image/background.png);
   height: 908px;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.main__container {
-  padding: 0 40px;
 }
 .main__body {
   display: flex;
 }
 .main__body-info {
-  margin-top: 187px;
+  margin-top: 224px;
   max-width: 460px;
 }
 .main__body-image img {
@@ -486,4 +512,25 @@ h2 {
   color: #C4C4C4;
   color: #CDCDCD;
   margin-top: 41px;
+}
+
+.about__body {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  padding-left: 175px;
+  padding-right: 180px;
+}
+.about__info {
+  padding-left: 120px;
+  padding-top: 15px;
+}
+.about__info-title {
+  color: #545454;
+  margin-bottom: 24px;
+  line-height: 128%;
+}
+.about__info-text {
+  margin-bottom: 25px;
+  color: #4C4C4C;
 }/*# sourceMappingURL=style.css.map */
