@@ -1,0 +1,9 @@
+.main{
+    background-image: url(../../assets/image/background.png);
+    height: 908px;
+    max-width: 1280px;
+    margin: 0 auto;
+    &__container{
+        padding: 0 40px;
+    }
+}
