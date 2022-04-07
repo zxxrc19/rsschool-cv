@@ -6,4 +6,27 @@
     &__container{
         padding: 0 40px;
     }
+    &__body{
+        display: flex;
+        &-info{
+            margin-top: 187px;
+            max-width: 460px;
+        }
+        &-image{
+            img{
+                margin-top: 60px;
+                margin-left: 43px;
+            }
+        }
+    }
+    .info__body{
+        &-title{
+            color: $white;
+        }
+        &-text{
+            @include paragraph-l;
+            color: $dark-s;
+            margin-top: 41px;
+        }
+    }
 }

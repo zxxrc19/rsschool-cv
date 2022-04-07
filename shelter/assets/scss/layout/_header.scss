@@ -25,6 +25,9 @@
             @include paragraph-l;
             color: $dark-s ;
             text-decoration: none;
+            &:hover{
+                color: $light-s;
+            }
             &.active{
                 color: $light-s;
                 border-bottom: 3px solid $primary;
