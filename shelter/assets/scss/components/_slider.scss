@@ -167,23 +167,23 @@
     }
 
     .slider__control[data-slide='prev']::before {
-    background-image: url("../../assets/icons/_l.svg");
+    background-image: url("../../assets/icons/arowl.svg");
     width: 10px;
     height: 23px;
   }
   .slider__control-prev2::before {
-    background-image: url("../../assets/icons/__l.svg");
+    background-image: url("../../assets/icons/arowll.svg");
     width: 24px;
     height: 23px;
   }
   
   .slider__control[data-slide='next']::before {
-    background-image: url("../../assets/icons/_r.svg");
+    background-image: url("../../assets/icons/arowR.svg");
     width: 10px;
     height: 23px;
   }
   .slider__control-next2::before {
-    background-image: url("../../assets/icons/__r.svg");
+    background-image: url("../../assets/icons/arowRR.svg");
     width: 24px;
     height: 23px;
   }
