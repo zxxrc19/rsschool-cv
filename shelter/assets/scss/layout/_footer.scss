@@ -1,0 +1,42 @@
+.footer{
+    background: url('../../assets/image/footer-gradient-background.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__body{
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contact{
+        padding-top: 17px;
+    }
+    &__adress{
+        padding-top: 17px;
+        margin-right: 9px;
+        .footer__title {
+            margin-bottom: 32px;
+        }
+        .footer__link {
+            margin-bottom: 32px;
+        }
+    }
+    &__title{
+        color: $light-xl;
+        margin-bottom: 38px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        @include h4;
+        color: $primary;
+        img{
+            margin-right: 20px;
+        }
+    }
+    &__img{
+        max-height: 310px;
+    }
+}
