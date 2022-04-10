@@ -15,6 +15,9 @@
         }
         .nav__menu-link{
             color: $dark-l;
+            &:hover{
+                color: $dark-3xl;
+            }
         }
         .nav__menu-link.active{
             color: $dark-3xl;
@@ -56,3 +59,9 @@
     }
 }
 
+.header__pets{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background: #fff;
+}

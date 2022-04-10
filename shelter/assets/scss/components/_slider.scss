@@ -18,9 +18,10 @@
       grid-column-gap: 90px;
       .slider__pets &{
           grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr);
+          grid-template-rows: 1fr 1fr;
           grid-auto-flow: column;
           grid-column-gap: 40px;
-          // grid-row-gap: 30px;
+          grid-row-gap: 30px;
      
       }
     }
@@ -51,6 +52,7 @@
       border: 2px solid $primary;
       border-radius: 50%;
       transition: .3s ease all;
+      background-color: transparent;
       &:hover{
         background-color: $primary-light;
         border: 2px solid $primary-light;
@@ -61,10 +63,16 @@
       }
       &_hide{
         border: 2px solid $dark-s;
+        color: $dark-s;
+        opacity: 0.35;
+        &:hover{
+          background-color: transparent;
+          border: 2px solid $dark-s;
+        }
       }
       .slider__pets  &{
         position: relative;
-        color: #0c0000;
+        color: $dark-3xl;
         font-size: 24px;
       }
     }
@@ -108,20 +116,7 @@
           border: 2px solid $primary-light;
         }
       }
-      .slider__pets &{
-        display: grid;
-        grid-row-gap: 30px;
-        background-color: transparent;
-      }
-      &-mini{
-        min-height: 435px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: $light-s;
-        padding-bottom: 30px;
-      }
+
     }
 
     &__title{
@@ -165,11 +160,12 @@
 
     .slider__control{
       margin: 0 10px;
+
+      &::before{
+        color: $dark-3xl;
+      }
     }
 
-    .slider__control-prev{
-      border: 2px solid $dark-s;
-    }
     .slider__control[data-slide='prev']::before {
     background-image: url("../../assets/icons/_l.svg");
     width: 10px;
