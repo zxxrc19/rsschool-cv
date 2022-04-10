@@ -1,13 +1,42 @@
 .button{
-    width: 207px;
-    height: 52px;
+    display: inline-block;
+    padding: 14px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $primary;
     border-radius: 100px;
     font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: $dark-3xl;
+    transition: .3s ease all;
+    &:hover{
+        background-color: $primary-light;
+    }
     .main__body &{
-        margin-top: 42px;
+        margin-top: 43px;
+        max-width: 207px;
+    }
+    .pets-container &{
+        width: 261px;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    .donation__info &{
+        border-radius: 9px;
+        width: 349px;
+        height: 43px;
+        display: flex;
+        justify-content: left;
+        padding: 14px 14px;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $dark-l;
+        margin-bottom: 20px;
+        img{
+            margin-right: 16px;
+        }
     }
 }

@@ -1,0 +1,195 @@
+.slider {
+    position: relative;
+    &__container{
+      margin: 0 auto;
+      max-width: 990px;
+      .slider__pets  &{
+          max-width: 100%;
+      }
+    }
+    &__wrapper {
+      overflow: hidden;
+    }
+    &__items {
+      display: grid;
+      transition: transform 0.5s ease;
+      grid-template-columns: minmax(270px,1fr) minmax(270px,1fr) minmax(270px,1fr);
+      grid-auto-flow: column;
+      grid-column-gap: 90px;
+      .slider__pets &{
+          grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr);
+          grid-auto-flow: column;
+          grid-column-gap: 40px;
+          // grid-row-gap: 30px;
+     
+      }
+    }
+
+    &__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      user-select: none;
+    }
+    &_disable-transition {
+      transition: none;
+    }
+    &__controls{
+      display: flex;
+      justify-content: center;
+    }
+    &__control {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      color: #fff;
+      text-align: center;
+      height: 52px;
+      transform: translateY(-50%);
+      border: 2px solid $primary;
+      border-radius: 50%;
+      transition: .3s ease all;
+      &:hover{
+        background-color: $primary-light;
+        border: 2px solid $primary-light;
+      }
+      &-num::before {
+        content: "";
+        min-width: 0%;
+      }
+      &_hide{
+        border: 2px solid $dark-s;
+      }
+      .slider__pets  &{
+        position: relative;
+        color: #0c0000;
+        font-size: 24px;
+      }
+    }
+    &__control[data-slide='prev'] {
+      left: 0;
+    }
+    &__control[data-slide='next'] {
+      right: 0;
+    }
+    &__control::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 6px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+      color: $dark-3xl;
+    }
+
+    &__control[data-slide='prev']::before {
+      background-image: url("../../assets/icons/Arrow.svg");
+    }
+
+    &__control[data-slide='next']::before {
+      background-image: url("../../assets/icons/Arrow-r.svg");
+    }
+    &__item {
+      min-height: 435px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: $light-s;
+      padding-bottom: 30px;
+      border-radius: 9px 9px 0px 0px;
+      cursor: pointer;
+      transition: .3s ease all;
+      &:hover{
+        .slider__link{
+          background-color: $primary-light;
+          border: 2px solid $primary-light;
+        }
+      }
+      .slider__pets &{
+        display: grid;
+        grid-row-gap: 30px;
+        background-color: transparent;
+      }
+      &-mini{
+        min-height: 435px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $light-s;
+        padding-bottom: 30px;
+      }
+    }
+
+    &__title{
+        font-family: 'Georgia';
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        color: $dark-l;
+        margin: 26px auto 29px;
+    }
+
+    &__link{
+      font-family: 'Georgia';
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $dark-3xl;
+      border: 2px solid $primary;
+      border-radius: 100px;
+      padding: 13px 42px;
+      text-decoration: none;
+    }
+}
+
+.slider__control-num{
+  background-color: $primary;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0%;
+    height: 6px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    color: #292929;
+  }
+
+}
+
+.slider__controls{
+    margin-top: 55px;
+
+    .slider__control{
+      margin: 0 10px;
+    }
+
+    .slider__control-prev{
+      border: 2px solid $dark-s;
+    }
+    .slider__control[data-slide='prev']::before {
+    background-image: url("../../assets/icons/_l.svg");
+    width: 10px;
+    height: 23px;
+  }
+  .slider__control-prev2::before {
+    background-image: url("../../assets/icons/__l.svg");
+    width: 24px;
+    height: 23px;
+  }
+  
+  .slider__control[data-slide='next']::before {
+    background-image: url("../../assets/icons/_r.svg");
+    width: 10px;
+    height: 23px;
+  }
+  .slider__control-next2::before {
+    background-image: url("../../assets/icons/__r.svg");
+    width: 24px;
+    height: 23px;
+  }
+}
+

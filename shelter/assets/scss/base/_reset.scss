@@ -12,8 +12,12 @@
    box-sizing: border-box;
  }
 
- p, h3,h2{
+ p, h3,h2, h4, h5,h6,ul, h1{
    margin: 0;
+ }
+
+ a{
+   text-decoration: none;
  }
 
  button{
