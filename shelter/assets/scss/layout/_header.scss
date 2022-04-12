@@ -60,8 +60,9 @@
 }
 
 .header__pets{
-    position: fixed;
+    position: sticky;
     z-index: 5;
     width: 100%;
     background: #fff;
+    top: 0;
 }
