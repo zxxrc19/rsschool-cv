@@ -115,11 +115,11 @@
 
     &__body{
         display: flex;
-   
+   justify-content: center;
     }
     &__img{
         margin-top: 10px;
-        margin-left: 46px;
+ 
     }
     &__info{
         margin-left: 29px;
