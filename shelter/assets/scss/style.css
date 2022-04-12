@@ -510,10 +510,12 @@ a:hover {
 }
 
 .header__pets {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 5;
   width: 100%;
   background: #fff;
+  top: 0;
 }
 
 .footer {
@@ -524,7 +526,7 @@ a:hover {
   background-size: cover;
 }
 .footer__body {
-  padding-top: 40px;
+  padding-top: 39px;
   display: flex;
   justify-content: space-between;
 }
@@ -533,13 +535,14 @@ a:hover {
 }
 .footer__adress {
   padding-top: 17px;
-  margin-right: 4px;
+  margin-right: 1px;
 }
 .footer__adress .footer__title {
   margin-bottom: 32px;
 }
 .footer__adress .footer__link {
   margin-bottom: 32px;
+  width: 300px;
 }
 .footer__title {
   color: #FFFFFF;
@@ -730,7 +733,7 @@ a:hover {
   line-height: 23px;
   letter-spacing: 0.06em;
   color: #545454;
-  margin: 26px auto 29px;
+  margin: 24px auto 30px;
 }
 .slider__link {
   font-family: "Georgia";
@@ -847,7 +850,7 @@ a:hover {
 }
 .pets__page {
   padding-bottom: 0;
-  padding-top: 200px;
+  padding-top: 81px;
 }
 .pets__page .slider {
   padding-bottom: 75px;
@@ -906,6 +909,7 @@ a:hover {
 }
 .donation__img {
   margin-top: 10px;
+  margin-left: 46px;
 }
 .donation__info {
   margin-left: 29px;
