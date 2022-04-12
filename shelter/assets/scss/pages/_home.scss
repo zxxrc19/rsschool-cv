@@ -59,7 +59,7 @@
     padding-bottom: 100px;
     &__page {
         padding-bottom: 0;
-        padding-top: 81px;
+        padding-top: 200px;
 
     }
     &__page .slider{
@@ -111,15 +111,14 @@
 
 .donation{
     background-color: $light-l ;
-    padding: 80px 0 100px 144px;
-    padding-left: 144px;
+    padding: 80px 0 100px 0;
+    padding-left: 0;
     &__body{
         display: flex;
-   
+        justify-content: center;
     }
     &__img{
         margin-top: 10px;
-        margin-left: 46px;
     }
     &__info{
         margin-left: 29px;
