@@ -1,4 +1,4 @@
-.main{
+.main {
     background-image: url(../../assets/image/background.png);
     height: 908px;
         &-info{
@@ -6,22 +6,24 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    &__body{
+    &__body {
         display: flex;
+        &-info {
+            margin-top: 224px;
             max-width: 460px;
         }
-        &-image{
-            img{
+        &-image {
+            img {
                 margin-top: 60px;
                 margin-left: 43px;
             }
         }
     }
-    .info__body{
-        &-title{
+    .info__body {
+        &-title {
             color: $white;
         }
-        &-text{
+        &-text {
             @include paragraph-l;
             color: $dark-s;
             margin-top: 41px;
@@ -29,8 +31,8 @@
     }
 }
 
-.about{
-    &__body{
+.about {
+    &__body {
         display: flex;
         justify-content: center;
         padding-top: 80px;
@@ -38,34 +40,33 @@
         padding-right: 180px;
         padding-bottom: 88px;
     }
-    &__info{
-        padding-left: 121px;  
+    &__info {
+        padding-left: 121px;
         padding-top: 15px;
-        &-title{
+        &-title {
             color: $dark-l;
             margin-bottom: 24px;
             line-height: 128%;
         }
-        &-text{
+        &-text {
             margin-bottom: 25px;
             color: $dark-xl;
         }
     }
 }
 
-.pets{
+.pets {
     background: $light-l;
     padding-top: 82px;
     padding-bottom: 100px;
     &__page {
         padding-bottom: 0;
-        padding-top: 81px;
-
+        padding-top: 80px;
     }
-    &__page .slider{
+    &__page .slider {
         padding-bottom: 75px;
     }
-    &__title{
+    &__title {
         color: $dark-l;
         max-width: 400px;
         text-align: center;
@@ -73,66 +74,66 @@
     }
 }
 
-.help{
+.help {
     padding-top: 82px;
     padding-bottom: 100px;
-    &__title{
+    &__title {
         margin: 0 auto;
         text-align: center;
         color: $dark-l;
         margin-bottom: 60px;
     }
-    &__items-row1{
+    &__items-row1 {
         display: grid;
         grid-template-columns: repeat(5, min-content);
         grid-column-gap: 120px;
         justify-content: center;
         margin-bottom: 57px;
     }
-
-    &__items-row2{
+    &__items-row2 {
         display: grid;
         grid-template-columns: repeat(4, min-content);
         grid-column-gap: 120px;
         justify-content: center;
     }
-    &__item{
+    &__item {
         text-align: center;
-        &-title{
+        &-title {
             color: $dark-l;
             white-space: nowrap;
         }
-        &-img{
+        &-img {
             max-width: 60px;
             margin-bottom: 24px;
         }
     }
 }
 
-.donation{
-    background-color: $light-l ;
-    padding: 80px 0 100px 0;
 
-    &__body{
+.donation {
+    background-color: $light-l;
+    padding: 80px 0 100px 0;
+    padding-left: 0;
+    &__body {
         display: flex;
-   justify-content: center;
+        justify-content: center;
+
     }
-    &__img{
+    &__img {
         margin-top: 10px;
- 
+
     }
-    &__info{
+    &__info {
         margin-left: 29px;
-        &-title{
+        &-title {
             color: $dark-l;
             margin-bottom: 20px;
         }
-        &-subtitle{
+        &-subtitle {
             color: $dark-l;
             margin-bottom: 19px;
         }
-      
-        &-text{
+        &-text {
             font-family: 'Arial';
             font-style: italic;
             font-weight: 400;
@@ -140,9 +141,8 @@
             line-height: 18px;
             display: flex;
             align-items: center;
-            color: $dark-m ;
+            color: $dark-m;
             max-width: 380px;
         }
     }
-    
 }
