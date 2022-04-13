@@ -1,4 +1,4 @@
-.button{
+.button {
     display: inline-block;
     padding: 14px 14px;
     display: flex;
@@ -10,20 +10,20 @@
     line-height: 130%;
     letter-spacing: 0.06em;
     color: $dark-3xl;
-    transition: .3s ease all;
-    &:hover{
+    @extend %transition;
+    &:hover {
         background-color: $primary-light;
     }
-    .main__body &{
+    .main__body & {
         margin-top: 43px;
         max-width: 207px;
     }
-    .pets-container &{
+    .pets-container & {
         width: 261px;
         margin: 0 auto;
         margin-top: 60px;
     }
-    .donation__info &{
+    .donation__info & {
         border-radius: 9px;
         width: 349px;
         height: 43px;
@@ -35,7 +35,7 @@
         letter-spacing: 0.06em;
         color: $dark-l;
         margin-bottom: 20px;
-        img{
+        img {
             margin-right: 16px;
         }
     }
