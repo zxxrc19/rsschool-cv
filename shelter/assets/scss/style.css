@@ -525,6 +525,8 @@ a:hover {
   color: #CDCDCD;
   text-decoration: none;
   line-height: 160%;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
 }
 
 .nav__menu-link:hover {
@@ -691,10 +693,8 @@ a:hover {
 .slider__items {
   display: -ms-grid;
   display: grid;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
   -ms-grid-columns: minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr);
       grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr);
   grid-auto-flow: column;
@@ -756,8 +756,8 @@ a:hover {
           transform: translateY(-50%);
   border: 2px solid #F1CDB3;
   border-radius: 50%;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
   background-color: transparent;
 }
 
@@ -933,32 +933,36 @@ a:hover {
 .main {
   background-image: url(../../assets/image/background.png);
   height: 908px;
+}
+
+.main-info {
+  margin-top: 224px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.main__body {
+.main-info__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.main__body-info {
+.main-info__body-info {
   margin-top: 224px;
   max-width: 460px;
 }
 
-.main__body-image img {
+.main-info__body-image img {
   margin-top: 60px;
   margin-left: 43px;
 }
 
-.main .info__body-title {
+.main-info .info__body-title {
   color: #ffffff;
 }
 
-.main .info__body-text {
+.main-info .info__body-text {
   font-family: 'Arial';
   font-size: 15px;
   font-weight: 400;
@@ -968,7 +972,7 @@ a:hover {
   margin-top: 41px;
 }
 
-.about__body {
+.main .about__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -981,57 +985,57 @@ a:hover {
   padding-bottom: 88px;
 }
 
-.about__info {
+.main .about__info {
   padding-left: 121px;
   padding-top: 15px;
 }
 
-.about__info-title {
+.main .about__info-title {
   color: #545454;
   margin-bottom: 24px;
   line-height: 128%;
 }
 
-.about__info-text {
+.main .about__info-text {
   margin-bottom: 25px;
   color: #4C4C4C;
 }
 
-.pets {
+.main .pets {
   background: #F6F6F6;
   padding-top: 82px;
   padding-bottom: 100px;
 }
 
-.pets__page {
+.main .pets__page {
   padding-bottom: 0;
   padding-top: 80px;
 }
 
-.pets__page .slider {
+.main .pets__page .slider {
   padding-bottom: 75px;
 }
 
-.pets__title {
+.main .pets__title {
   color: #545454;
   max-width: 400px;
   text-align: center;
   margin: 0 auto 59px;
 }
 
-.help {
+.main .help {
   padding-top: 82px;
   padding-bottom: 100px;
 }
 
-.help__title {
+.main .help__title {
   margin: 0 auto;
   text-align: center;
   color: #545454;
   margin-bottom: 60px;
 }
 
-.help__items-row1 {
+.main .help__items-row1 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (min-content)[5];
@@ -1044,7 +1048,7 @@ a:hover {
   margin-bottom: 57px;
 }
 
-.help__items-row2 {
+.main .help__items-row2 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (min-content)[4];
@@ -1056,53 +1060,52 @@ a:hover {
           justify-content: center;
 }
 
-.help__item {
+.main .help__item {
   text-align: center;
 }
 
-.help__item-title {
+.main .help__item-title {
   color: #545454;
   white-space: nowrap;
 }
 
-.help__item-img {
+.main .help__item-img {
   max-width: 60px;
   margin-bottom: 24px;
 }
 
-.donation {
+.main .donation {
   background-color: #F6F6F6;
   padding: 80px 0 100px 0;
   padding-left: 0;
+}
 
-
-.donation__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-    -webkit-box-pack: center;
+.main .donation__body {
+  display: block;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
 
-
-.donation__img {
+.main .donation__img {
   margin-top: 10px;
+}
 
-.donation__info {
+.main .donation__info {
   margin-left: 29px;
 }
 
-.donation__info-title {
+.main .donation__info-title {
   color: #545454;
   margin-bottom: 20px;
 }
 
-.donation__info-subtitle {
+.main .donation__info-subtitle {
   color: #545454;
   margin-bottom: 19px;
 }
 
-.donation__info-text {
+.main .donation__info-text {
   font-family: 'Arial';
   font-style: italic;
   font-weight: 400;
