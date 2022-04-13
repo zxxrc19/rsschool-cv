@@ -1,56 +1,54 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     padding-top: 61px;
     height: 120px;
-
-    &-pets{
+    &-pets {
         padding-top: 31px;
-
         .nav__logo-title {
             color: $dark-l;
         }
-        .nav__logo-subtitle{
+        .nav__logo-subtitle {
             color: $dark-3xl;
         }
-        .nav__menu-link{
+        .nav__menu-link {
             color: $dark-l;
-            &:hover{
+            &:hover {
                 color: $dark-3xl;
             }
         }
-        .nav__menu-link.active{
+        .nav__menu-link.active {
             color: $dark-3xl;
         }
     }
-    &__logo{
-        &-title{
+    &__logo {
+        &-title {
             @include logo-title;
             color: $primary;
         }
-        &-subtitle{
+        &-subtitle {
             @include logo_subtitle;
             color: $white;
             margin-top: 9px;
             margin-left: 4px;
         }
     }
-    &__menu{
+    &__menu {
         display: flex;
         list-style: none;
         padding-top: 15px;
-        &-item{
+        &-item {
             margin-left: 36px;
         }
-        &-link{
+        &-link {
             @include paragraph-l;
-            color: $dark-s ;
+            color: $dark-s;
             text-decoration: none;
             line-height: 160%;
-            &:hover{
+            &:hover {
                 color: $light-s;
             }
-            &.active{
+            &.active {
                 color: $light-s;
                 border-bottom: 3px solid $primary;
                 padding-bottom: 4px;
@@ -59,7 +57,7 @@
     }
 }
 
-.header__pets{
+.header__pets {
     position: sticky;
     z-index: 5;
     width: 100%;
