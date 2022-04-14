@@ -3,6 +3,9 @@
     justify-content: space-between;
     padding-top: 61px;
     height: 120px;
+    @media screen and (max-width:$desctop){
+        padding-top: 31px;
+    }
     &-pets {
         padding-top: 31px;
         .nav__logo-title {

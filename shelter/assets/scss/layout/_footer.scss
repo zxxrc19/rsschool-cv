@@ -1,6 +1,6 @@
 .footer{
     background: url('../../assets/image/footer-gradient-background.jpg');
-    height: 350px;
+    min-height: 350px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -8,6 +8,11 @@
         padding-top: 39px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width:$desctop){
+            justify-content: space-around;
+            padding-top: 14px;
+        }
     }
     &__contact{
         padding-top: 17px;
@@ -40,5 +45,8 @@
     }
     &__img{
         max-height: 310px;
+        @media screen and (max-width:$desctop){
+            margin-top: 25px;
+        }
     }
 }

@@ -4,6 +4,9 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media screen and (max-width:$desctop){
+        height: 1174px;
+    }
     &-info {
         margin-top: 224px;
         background-repeat: no-repeat;
@@ -12,14 +15,32 @@
     }
     &__body {
         display: flex;
+        @media screen and (max-width:$desctop){
+            flex-direction: column;
+            align-items: center;
+        }
         &-info {
             margin-top: 224px;
             max-width: 460px;
+            @media screen and (max-width:$desctop){
+                margin-top: 31px;
+                margin-left: 0;
+            }
         }
         &-image {
+            @media screen and (max-width:$desctop){
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
             img {
                 margin-top: 60px;
                 margin-left: 43px;
+                @media screen and (max-width:$desctop){
+                    max-width: 569px;
+                    margin-left: 139px;
+                    margin-top: 57px;
+                }
             }
         }
     }
@@ -43,10 +64,23 @@
         padding-left: 175px;
         padding-right: 180px;
         padding-bottom: 88px;
+        @media screen and (max-width:$desctop){
+            flex-direction: column;
+            align-items: center;
+            max-width: 429px;
+            margin: 0 auto;
+            padding: 0;
+            padding-top: 57px;
+            padding-bottom: 95px;
+        }
     }
     &__info {
         padding-left: 121px;
         padding-top: 15px;
+        @media screen and (max-width:$desctop){
+            padding-left: 0;            
+            padding-bottom: 55px;
+        }
         &-title {
             color: $dark-l;
             margin-bottom: 24px;
@@ -55,6 +89,11 @@
         &-text {
             margin-bottom: 25px;
             color: $dark-xl;
+        }
+    }
+    &__image{
+        @media screen and (max-width:$desctop){
+            order: 1;
         }
     }
 }
@@ -74,12 +113,12 @@
         color: $dark-l;
         max-width: 400px;
         text-align: center;
-        margin: 0 auto 59px;
+        margin: 0 auto 57px;
     }
 }
 
 .help {
-    padding-top: 82px;
+    padding-top: 81px;
     padding-bottom: 100px;
     &__title {
         margin: 0 auto;
@@ -87,21 +126,26 @@
         color: $dark-l;
         margin-bottom: 60px;
     }
-    &__items-row1 {
-        display: grid;
-        grid-template-columns: repeat(5, min-content);
+    &__items{
+        display: flex;
         grid-column-gap: 120px;
+        grid-row-gap: 56px;
         justify-content: center;
-        margin-bottom: 57px;
+        align-content: stretch;
+        flex-wrap: wrap;
+        padding: 0 85px;
+        @media screen and (max-width:$desctop){
+            grid-column-gap: 60px;
+            padding: 0px 0px;
+        }
     }
-    &__items-row2 {
-        display: grid;
-        grid-template-columns: repeat(4, min-content);
-        grid-column-gap: 120px;
-        justify-content: center;
-    }
+
+    
     &__item {
         text-align: center;
+        @media screen and (max-width:$desctop){
+          width: 170px;
+        }
         &-title {
             color: $dark-l;
             white-space: nowrap;
@@ -115,17 +159,31 @@
 
 .donation {
     background-color: $light-l;
-    padding: 80px 0 100px 0;
+    
     padding-left: 0;
     &__body {
+        padding: 82px 0 100px 0;
         display: flex;
         justify-content: center;
+        @media screen and (max-width:$desctop){
+            flex-direction: column;
+            align-items: center;
+            padding: 82px 0 95px 0;
+        }
     }
     &__img {
         margin-top: 10px;
+        @media screen and (max-width:$desctop){
+            order: 1;
+            margin-top: 60px;
+         }
     }
     &__info {
         margin-left: 29px;
+        @media screen and (max-width:$desctop){
+            order: 0;
+            margin-left: 0;
+         }
         &-title {
             color: $dark-l;
             margin-bottom: 20px;

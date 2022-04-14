@@ -17,11 +17,14 @@
     .main__body & {
         margin-top: 43px;
         max-width: 207px;
+        @media screen and (max-width:$desctop){
+            margin: 43px auto;
+        }
     }
     .pets-container & {
         width: 261px;
         margin: 0 auto;
-        margin-top: 60px;
+        margin-top: 61px;
     }
     .donation__info & {
         border-radius: 9px;
@@ -36,7 +39,8 @@
         color: $dark-l;
         margin-bottom: 20px;
         img {
-            margin-right: 16px;
+            margin-right: 15px;
+            margin-left: 1px;
         }
     }
 }
