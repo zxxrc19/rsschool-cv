@@ -6,6 +6,9 @@
     }
     line-height: 130%;
     color: $grey;
+    @media screen and (max-width:$tablet){
+        font-size: 25px;
+    }
 }
 
 @mixin h3 {
@@ -17,6 +20,9 @@
     line-height: 130%;
     letter-spacing: 0.06em;
     color: $grey;
+    @media screen and (max-width:$tablet){
+        font-size: 25px;
+    }
 }
 
 @mixin h3-mobile {
@@ -39,6 +45,10 @@
     line-height: 115%;
     letter-spacing: 0.06em;
     color: $grey;
+    @media screen and (max-width:$tablet){
+        font-size: 15px;
+        line-height: 110%;
+    }
 }
 
 @mixin h5 {
@@ -50,6 +60,10 @@
     line-height: 110%;
     letter-spacing: 0.06em;
     color: $grey;
+    @media screen and (max-width:$tablet){
+        font-size: 15px;
+        line-height: 160%;
+    }
 }
 
 @mixin h5-modal {

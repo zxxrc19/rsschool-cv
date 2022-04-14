@@ -25,6 +25,9 @@
         width: 261px;
         margin: 0 auto;
         margin-top: 61px;
+        @media screen and (max-width:$tablet){
+            margin-top: 18px;
+        }
     }
     .donation__info & {
         border-radius: 9px;
@@ -41,6 +44,13 @@
         img {
             margin-right: 15px;
             margin-left: 1px;
+        }
+        @media screen and (max-width:$tablet){
+          max-width: 281px;
+          font-size:  15px;
+          line-height:  110%;
+          margin: 0 auto;
+          margin-bottom: 20px;
         }
     }
 }
