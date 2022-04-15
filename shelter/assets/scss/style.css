@@ -383,6 +383,7 @@ template {
 }
 body {
   font-family: Georgia, Arial, serif;
+  position: relative;
 }
 
 ._container {
@@ -477,6 +478,8 @@ a:hover {
   justify-content: space-between;
   padding-top: 61px;
   height: 120px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 @media screen and (max-width: 1279px) {
   .nav {
@@ -500,6 +503,12 @@ a:hover {
 }
 .nav-pets .nav__menu-link.active {
   color: #292929;
+}
+.nav__logo-active {
+  position: absolute;
+  z-index: 10;
+  top: 31px;
+  left: 10px;
 }
 .nav__logo-title {
   font-family: "Georgia";
@@ -529,10 +538,34 @@ a:hover {
 @media screen and (max-width: 767px) {
   .nav__menu {
     display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 5;
+    padding: 0;
+    right: -300%;
+    top: 0;
+    background: #292929;
+    transition: 1s ease all;
+    display: flex;
+    flex-direction: column;
+    padding-top: 250px;
   }
+}
+.nav__menu-active {
+  display: block;
+  right: 0;
 }
 .nav__menu-item {
   margin-left: 36px;
+}
+@media screen and (max-width: 767px) {
+  .nav__menu-item {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 42px;
+  }
 }
 .nav__menu-link {
   font-family: "Arial";
@@ -553,6 +586,17 @@ a:hover {
   border-bottom: 3px solid #F1CDB3;
   padding-bottom: 4px;
 }
+@media screen and (max-width: 767px) {
+  .nav__menu-link.active {
+    padding-bottom: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav__menu-link {
+    font-size: 32px;
+    line-height: 160%;
+  }
+}
 .nav__burger {
   display: none;
   background-image: url("../../assets/icons/Burger.svg");
@@ -562,6 +606,15 @@ a:hover {
   background-position: center;
   margin-top: 18px;
   margin-right: 43px;
+  transition: 0.5s ease all;
+}
+.nav__burger-active {
+  position: absolute;
+  z-index: 10;
+  top: 31px;
+  height: 22px;
+  right: 11px;
+  transform: rotate(90deg);
 }
 @media screen and (max-width: 767px) {
   .nav__burger {
@@ -605,6 +658,7 @@ a:hover {
 }
 .footer__contact {
   padding-top: 17px;
+  max-width: 280px;
 }
 @media screen and (max-width: 767px) {
   .footer__contact {
@@ -616,6 +670,7 @@ a:hover {
 .footer__adress {
   padding-top: 17px;
   margin-right: 1px;
+  max-width: 302px;
 }
 @media screen and (max-width: 767px) {
   .footer__adress {

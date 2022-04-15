@@ -3,6 +3,9 @@
     justify-content: space-between;
     padding-top: 61px;
     height: 120px;
+    flex-wrap: wrap;
+    width: 100%;
+
     @media screen and (max-width:$desctop){
         padding-top: 31px;
     }
@@ -25,6 +28,12 @@
         }
     }
     &__logo {
+        &-active{
+            position: absolute;
+            z-index: 10;
+            top: 31px;
+            left: 10px;
+        }
         &-title {
             @include logo-title;
             color: $primary;
@@ -40,11 +49,35 @@
         display: flex;
         list-style: none;
         padding-top: 15px;
+
         @media screen and (max-width:$tablet){
             display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            z-index: 5;
+            padding: 0;
+            right: -300%;
+            top: 0;
+            background: #292929;
+            transition:1s ease all;
+            display: flex;
+            flex-direction: column;  
+            padding-top: 250px;
         }
+        &-active{
+            display: block;
+            right: 0;
+        }
+   
         &-item {
             margin-left: 36px;
+            @media screen and (max-width:$tablet){
+                margin-left: 0;
+                text-align: center;
+                margin-bottom: 42px;
+            }
         }
         &-link {
             @include paragraph-l;
@@ -59,6 +92,13 @@
                 color: $light-s;
                 border-bottom: 3px solid $primary;
                 padding-bottom: 4px;
+                @media screen and (max-width:$tablet){
+                    padding-bottom: 5px;
+                }
+            }
+            @media screen and (max-width:$tablet){
+                font-size: 32px;
+                line-height: 160%;
             }
         }
     }
@@ -71,6 +111,15 @@
         background-position: center;
         margin-top: 18px;
         margin-right: 43px;
+        @include transition;
+        &-active{
+            position: absolute;
+            z-index: 10;
+            top: 31px;
+            height: 22px;
+            right: 11px;
+            transform: rotate(90deg);
+        }
         @media screen and (max-width:$tablet){
             display: block;
         }
@@ -83,4 +132,16 @@
     width: 100%;
     background: #fff;
     top: 0;
+}
+
+header.active{
+    // position: absolute;
+    // width: 100%;
+    // height: 100%;
+    // left: 0;
+    // background: black;
+    // padding-left: 10px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // transition: .5s ease all;
 }

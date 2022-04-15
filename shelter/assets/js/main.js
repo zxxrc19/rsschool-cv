@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // const slider = new ChiefSlider('.slider', {
-    //   loop: false
-    // });
 
 
    if(!document.querySelector('.slider__pets')){
@@ -131,11 +128,16 @@ document.addEventListener('DOMContentLoaded', function () {
           btnSliderRAll.classList.remove('slider__control_hide')
         }
       }
-
-
-
       checkBtn()
    }
 
-
   });
+  let menuList = document.querySelector('.nav__menu');
+  let menuLogo = document.querySelector('.nav__logo');
+  let menuBurger = document.querySelector('.nav__burger');
+
+  document.querySelector('#btnBurger').addEventListener('click', ()=>{
+    menuList.classList.toggle('nav__menu-active');
+    menuLogo.classList.toggle('nav__logo-active');
+    menuBurger.classList.toggle('nav__burger-active');
+  })
