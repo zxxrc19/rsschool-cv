@@ -13,7 +13,7 @@
             max-width: 580px;
             margin: 0 auto;
         }
-        @media screen and (max-width:$desctop){
+        @media screen and (max-width:$tablet){
             max-width: 270px;
         }
     }
@@ -59,7 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 52px;
+        min-width: 52px;
         color: #fff;
         text-align: center;
         height: 52px;
@@ -91,6 +91,7 @@
             position: relative;
             color: $dark-3xl;
             font-size: 24px;
+          
         }
         @media screen and (max-width:$tablet){
             position: static;
@@ -165,9 +166,71 @@
     }
 }
 
-.slider__control-num {
+
+
+.slider__controls {
+    margin-top: 85px;
+    @media screen and (max-width:$desctop){
+        margin-top: 66px;
+    }
+    @media screen and (max-width:$tablet){
+        margin-top: 68px;
+    }
+    .slider__control {
+        margin: 0 10px;
+        cursor: pointer;
+        &::before {
+            color: $dark-3xl;
+        }
+        @media screen and (max-width:$tablet){
+            margin: 0 5px;
+        }
+    }
+    .slider__control[data-slide='prev']::before {
+        background-image: url("../../assets/icons/arowl.svg");
+        width: 10px;
+        height: 23px;
+        @media screen and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+    .slider__control-prev2::before {
+        background-image: url("../../assets/icons/arowll.svg");
+        width: 24px;
+        height: 23px;
+        @media screen and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+    .slider__control[data-slide='next']::before {
+        background-image: url("../../assets/icons/arowR.svg");
+        width: 10px;
+        height: 23px;
+        @media screen and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+    .slider__control-next2::before {
+        background-image: url("../../assets/icons/arowRR.svg");
+        width: 24px;
+        height: 23px;
+        @media screen and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+   
+}
+
+.slider__pets .slider__control-num {
     background-color: $primary;
     cursor: default !important;
+
+
+    @media screen and (max-width:$tablet){
+        font-size: 19px !important;
+        line-height: 46px !important;
+    }
+
     &::before {
         content: "";
         display: inline-block;
@@ -178,43 +241,11 @@
         color: #292929;
         cursor: default;
     }
+    
     &:hover {
         background-color: $primary;
         border: 1px solid transparent;
         cursor: default;
     }
-}
-
-.slider__controls {
-    margin-top: 85px;
-    @media screen and (max-width:$desctop){
-        margin-top: 66px;
-    }
-    .slider__control {
-        margin: 0 10px;
-        cursor: pointer;
-        &::before {
-            color: $dark-3xl;
-        }
-    }
-    .slider__control[data-slide='prev']::before {
-        background-image: url("../../assets/icons/arowl.svg");
-        width: 10px;
-        height: 23px;
-    }
-    .slider__control-prev2::before {
-        background-image: url("../../assets/icons/arowll.svg");
-        width: 24px;
-        height: 23px;
-    }
-    .slider__control[data-slide='next']::before {
-        background-image: url("../../assets/icons/arowR.svg");
-        width: 10px;
-        height: 23px;
-    }
-    .slider__control-next2::before {
-        background-image: url("../../assets/icons/arowRR.svg");
-        width: 24px;
-        height: 23px;
-    }
+  
 }

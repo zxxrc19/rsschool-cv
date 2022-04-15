@@ -31,8 +31,13 @@
         &-active{
             position: absolute;
             z-index: 10;
+            left: 43px;
             top: 31px;
-            left: 10px;
+            @media screen and (max-width:$mobile2){
+                
+                left: 10px;
+            }
+           
         }
         &-title {
             @include logo-title;
@@ -62,13 +67,18 @@
             top: 0;
             background: #292929;
             transition:1s ease all;
-            display: flex;
             flex-direction: column;  
             padding-top: 250px;
         }
         &-active{
-            display: block;
+            display: flex;
             right: 0;
+            left: 34px;
+            @media screen and (max-width:$mobile2){
+                left: 0;
+                
+            }
+         
         }
    
         &-item {
@@ -112,6 +122,11 @@
         margin-top: 18px;
         margin-right: 43px;
         @include transition;
+        &-black{
+            svg line{
+                stroke: #000;
+            }
+        }
         &-active{
             position: absolute;
             z-index: 10;
@@ -132,16 +147,26 @@
     width: 100%;
     background: #fff;
     top: 0;
+    &-active{
+        position: static;
+        .nav__logo-title{
+            color: $primary;
+        }
+        .nav__logo-subtitle{
+            color: $light-xl;
+        }
+        .nav__menu-link {
+            color: $dark-s;
+        }
+        .nav__menu-link.active {
+            color: $light-s;
+        }
+        .nav__burger-black{
+            svg line{
+                stroke: $primary;
+            }
+        }
+    }
+   
 }
 
-header.active{
-    // position: absolute;
-    // width: 100%;
-    // height: 100%;
-    // left: 0;
-    // background: black;
-    // padding-left: 10px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // transition: .5s ease all;
-}
