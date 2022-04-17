@@ -17,7 +17,7 @@
     .main__body & {
         margin-top: 43px;
         max-width: 207px;
-        @media screen and (max-width:$desctop){
+        @media all and (max-width:$desctop){
             margin: 43px auto;
         }
     }
@@ -25,7 +25,7 @@
         width: 261px;
         margin: 0 auto;
         margin-top: 61px;
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             margin-top: 18px;
         }
     }
@@ -45,7 +45,7 @@
             margin-right: 15px;
             margin-left: 1px;
         }
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
           max-width: 281px;
           font-size:  15px;
           line-height:  110%;

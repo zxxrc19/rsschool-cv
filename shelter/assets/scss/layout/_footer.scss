@@ -9,11 +9,11 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media screen and (max-width:$desctop){
+        @media all and (max-width:$desctop){
             justify-content: space-around;
             padding-top: 14px;
         }
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             justify-content: center;
             padding-top: 14px;
         }
@@ -21,7 +21,7 @@
     &__contact{
         padding-top: 17px;
         max-width: 280px;
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,15 +32,15 @@
         padding-top: 17px;
         margin-right: 1px;
         max-width: 302px;
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 0;
+    
         }
         .footer__title {
             margin-bottom: 32px;
-            @media screen and (max-width:$tablet){
+            @media all and (max-width:$tablet){
                 max-width: 280px;
                 margin-bottom: 39px;
             }
@@ -48,7 +48,7 @@
         .footer__link {
             margin-bottom: 32px;
             width: 300px;
-            @media screen and (max-width:$tablet){
+            @media all and (max-width:$tablet){
                 margin-bottom: 39px;
             }
         }
@@ -56,7 +56,7 @@
     &__title{
         color: $light-xl;
         margin-bottom: 38px;
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             letter-spacing: 1.6px;
             text-align: center;
         }
@@ -70,7 +70,7 @@
         img{
             margin-right: 20px;
         }
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             font-weight: 400;
             font-size: 20px;
             line-height: 115%;
@@ -78,14 +78,14 @@
     }
     &__img{
         max-height: 310px;
-        @media screen and (max-width:$desctop){
+        @media all and (max-width:$desctop){
             margin-top: 25px;
         }
-        @media screen and (max-width:$tablet){
+        @media all and (max-width:$tablet){
             margin-top: 0;
         }
         img{
-            @media screen and (max-width:$tablet){
+            @media all and (max-width:$tablet){
                 max-width: 260px;
                 height: 100%;
             } 

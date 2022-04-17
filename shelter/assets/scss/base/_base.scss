@@ -8,11 +8,11 @@ body{
     padding: 0 40px;
     max-width: 1280px;
     margin: 0 auto;
-    @media screen and (max-width:$desctop){
+    @media all and (max-width:$desctop){
         width:100%;
         padding: 0 30px;
     }
-    @media screen and (max-width:$tablet){
+    @media all and (max-width:$tablet){
         width:100%;
         padding: 0 10px;
     }
