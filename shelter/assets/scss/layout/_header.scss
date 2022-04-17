@@ -3,6 +3,12 @@
     justify-content: space-between;
     padding-top: 61px;
     height: 120px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media all and (max-width:$desctop){
+        padding-top: 31px;
+    }
     &-pets {
         padding-top: 31px;
         .nav__logo-title {
@@ -22,6 +28,17 @@
         }
     }
     &__logo {
+        &-active{
+            position: absolute;
+            z-index: 10;
+            left: 43px;
+            top: 31px;
+            @media all and (max-width:$mobile2){
+                
+                left: 10px;
+            }
+           
+        }
         &-title {
             @include logo-title;
             color: $primary;
@@ -37,8 +54,40 @@
         display: flex;
         list-style: none;
         padding-top: 15px;
+
+        @media all and (max-width:$tablet){
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            z-index: 5;
+            padding: 0;
+            right: -300%;
+            top: 0;
+            background: #292929;
+            transition:1s ease all;
+            flex-direction: column;  
+            padding-top: 250px;
+        }
+        &-active{
+            display: flex;
+            right: 0;
+            left: 34px;
+            @media all and (max-width:$mobile2){
+                left: 0;
+                
+            }
+         
+        }
+   
         &-item {
             margin-left: 36px;
+            @media all and (max-width:$tablet){
+                margin-left: 0;
+                text-align: center;
+                margin-bottom: 42px;
+            }
         }
         &-link {
             @include paragraph-l;
@@ -53,7 +102,41 @@
                 color: $light-s;
                 border-bottom: 3px solid $primary;
                 padding-bottom: 4px;
+                @media all and (max-width:$tablet){
+                    padding-bottom: 5px;
+                }
             }
+            @media all and (max-width:$tablet){
+                font-size: 32px;
+                line-height: 160%;
+            }
+        }
+    }
+    &__burger{
+        display: none;
+        background-image: url('../../assets/icons/Burger.svg');
+        max-height: 22px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 18px;
+        margin-right: 43px;
+        @include transition;
+        &-black{
+            svg line{
+                stroke: #000;
+            }
+        }
+        &-active{
+            position: absolute;
+            z-index: 10;
+            top: 31px;
+            height: 22px;
+            right: 11px;
+            transform: rotate(90deg);
+        }
+        @media all and (max-width:$tablet){
+            display: block;
         }
     }
 }
@@ -64,4 +147,26 @@
     width: 100%;
     background: #fff;
     top: 0;
+    &-active{
+        position: static;
+        .nav__logo-title{
+            color: $primary;
+        }
+        .nav__logo-subtitle{
+            color: $light-xl;
+        }
+        .nav__menu-link {
+            color: $dark-s;
+        }
+        .nav__menu-link.active {
+            color: $light-s;
+        }
+        .nav__burger-black{
+            svg line{
+                stroke: $primary;
+            }
+        }
+    }
+   
 }
+

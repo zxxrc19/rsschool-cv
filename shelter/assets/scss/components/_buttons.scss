@@ -17,11 +17,17 @@
     .main__body & {
         margin-top: 43px;
         max-width: 207px;
+        @media all and (max-width:$desctop){
+            margin: 43px auto;
+        }
     }
     .pets-container & {
         width: 261px;
         margin: 0 auto;
-        margin-top: 60px;
+        margin-top: 61px;
+        @media all and (max-width:$tablet){
+            margin-top: 18px;
+        }
     }
     .donation__info & {
         border-radius: 9px;
@@ -36,7 +42,15 @@
         color: $dark-l;
         margin-bottom: 20px;
         img {
-            margin-right: 16px;
+            margin-right: 15px;
+            margin-left: 1px;
+        }
+        @media all and (max-width:$tablet){
+          max-width: 281px;
+          font-size:  15px;
+          line-height:  110%;
+          margin: 0 auto;
+          margin-bottom: 20px;
         }
     }
 }
