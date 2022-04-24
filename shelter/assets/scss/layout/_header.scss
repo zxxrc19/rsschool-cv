@@ -1,0 +1,177 @@
+.header{
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    &-active{
+        height: 100%;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 61px;
+    height: 120px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media all and (max-width:$desctop){
+        padding-top: 31px;
+    }
+    &-pets {
+        padding-top: 31px;
+        .nav__logo-title {
+            color: $dark-l;
+        }
+        .nav__logo-subtitle {
+            color: $dark-3xl;
+        }
+        .nav__menu{
+           background-color: $white;
+        }
+        .nav__menu-link {
+            color: $dark-l;
+            &:hover {
+                color: $dark-3xl;
+            }
+        }
+        .nav__menu-link.active {
+            color: $dark-3xl;
+        }
+    }
+    &__logo {
+        animation-name: logo;
+        animation-duration: 1s;
+        &-active{
+            position: absolute;
+            z-index: 10;
+            top: 31px;
+            left: 10px;
+        }
+        &-title {
+            @include logo-title;
+            color: $primary;
+        }
+        &-subtitle {
+            @include logo_subtitle;
+            color: $white;
+            margin-top: 9px;
+            margin-left: 4px;
+        }
+    }
+    &__menu {
+        display: flex;
+        list-style: none;
+        padding-top: 15px;
+        @media all and (max-width:$tablet){
+            display: flex;
+            position: fixed;
+            width: 320px;
+            height: 100vh;
+            margin: 0;
+            z-index: 7;
+            padding-top: 250px;
+            right: -320px;
+            top: 0;
+            background: #292929;
+            flex-direction: column;  
+            transition: 1s all ease;
+            padding-left: 0;
+        }
+        &-active{
+            right: 0;
+        }   
+        &-item {
+            margin-left: 36px;
+            @media all and (max-width:$tablet){
+                margin-left: 0;
+                text-align: center;
+                margin-bottom: 42px;
+            }
+        }
+        &-link {
+            @include paragraph-l;
+            color: $dark-s;
+            text-decoration: none;
+            line-height: 160%;
+            @include transition;
+            &:hover {
+                color: $light-s;
+            }
+            &.active {
+                color: $light-s;
+                border-bottom: 3px solid $primary;
+                padding-bottom: 4px;
+                @media all and (max-width:$tablet){
+                    padding-bottom: 5px;
+                }
+            }
+            @media all and (max-width:$tablet){
+                font-size: 32px;
+                line-height: 160%;
+            }
+        }
+    }
+    &__burger{
+        display: none;
+        background-image: url('../../assets/icons/Burger.svg');
+        max-height: 22px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 1s all ease;
+        position: absolute;
+        top:49px;
+        right: 53px;
+        z-index: 5;
+        &-black{
+            background-image: url('../../assets/icons/Burger-black.svg');
+        }
+       
+        @media all and (max-width:$tablet){
+            display: block;
+            height: 22px;
+            &-active{
+                height: 22px;
+                position: fixed;
+                z-index: 20;
+                top:49px;
+                right: 53px;
+                transform: rotate(90deg);
+                z-index: 15;
+            }
+        }
+    }
+}
+
+.header__pets {
+    position: sticky;
+    z-index: 5;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    &-active{
+        position: static;
+    }
+}
+
+@keyframes slide-in {
+    from{
+        right: -320px;
+    }
+    to { right: 0; }
+}
+
+.nav__logo-active{
+    animation-name: logo;
+    animation-duration: 1s;
+}
+
+@keyframes logo {
+    from{
+        transform: scale(0);
+    }
+    to {   transform: scale(1);}
+}

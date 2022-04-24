@@ -1,0 +1,98 @@
+.footer{
+    background: url('../../assets/image/footer-gradient-background.jpg');
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__body{
+        padding-top: 39px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media all and (max-width:$desctop){
+            justify-content: space-around;
+            padding-top: 14px;
+        }
+        @media all and (max-width:$tablet){
+            justify-content: center;
+            padding-top: 14px;
+        }
+    }
+    &__contact{
+        padding-top: 17px;
+        max-width: 280px;
+        @media all and (max-width:$tablet){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+       
+    }
+    &__adress{
+        padding-top: 17px;
+        margin-right: 1px;
+        max-width: 302px;
+        @media all and (max-width:$tablet){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+        }
+        @media all and (max-width:$tablet){
+            padding-top: 0px;
+    
+        }
+        .footer__title {
+            margin-bottom: 32px;
+            @media all and (max-width:$tablet){
+                max-width: 280px;
+                margin-bottom: 39px;
+            }
+        }
+        .footer__link {
+            margin-bottom: 32px;
+            width: 300px;
+            @media all and (max-width:$tablet){
+                margin-bottom: 39px;
+            }
+        }
+    }
+    &__title{
+        color: $light-xl;
+        margin-bottom: 38px;
+        @media all and (max-width:$tablet){
+            letter-spacing: 1.6px;
+            text-align: center;
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        @include h4;
+        color: $primary;
+        img{
+            margin-right: 20px;
+        }
+        @media all and (max-width:$tablet){
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 115%;
+        }
+    }
+    &__img{
+        max-height: 310px;
+        @media all and (max-width:$desctop){
+            margin-top: 25px;
+        }
+        @media all and (max-width:$tablet){
+            margin-top: 0;
+        }
+        img{
+            @media all and (max-width:$tablet){
+                max-width: 260px;
+                height: 100%;
+            } 
+        }
+    }
+}

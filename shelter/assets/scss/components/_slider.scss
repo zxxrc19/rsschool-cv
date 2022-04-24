@@ -1,0 +1,333 @@
+.slider {
+    position: relative;
+    &__container {
+        margin: 0 auto;
+        max-width: 990px;
+        .slider__pets & {
+            max-width: 100%;
+        }
+    }
+    &__wrapper {
+        overflow: hidden;
+        max-width: 990px;
+        .slider__pets & {
+            max-width: 1200px;
+            @media all and (max-width:$desctop){
+                max-width: 580px;
+                margin: 0 auto;
+            }
+            @media all and (max-width:$tablet){
+                max-width: 270px;
+            }
+        }
+        @media all and (max-width:$desctop){
+            max-width: 580px;
+            margin: 0 auto;
+        }
+        @media all and (max-width:$tablet){
+            max-width: 270px;
+        }
+    }
+    &__items {
+        position: relative;
+        display: flex;
+        @include transition;
+        grid-column-gap: 90px;
+
+        @media all and (max-width:$desctop){
+            grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr);
+            grid-column-gap: 40px;
+        }
+        .slider__pets & {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            row-gap: 30px;
+            column-gap: 40px;
+            @media all and (max-width:$desctop){
+                grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr);
+                grid-column-gap: 40px;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-row-gap: 28px;
+            }
+            @media all and (max-width:$tablet){
+                grid-template-columns: minmax(270px, 1fr) ;
+                grid-column-gap: 40px;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-row-gap: 28px;
+            }
+        }
+    }
+    &__item {
+
+        max-width: 100%;
+        user-select: none;
+    }
+    &_disable-transition {
+        transition: none;
+    }
+    &__controls {
+        display: flex;
+        justify-content: center;
+    }
+    &__control {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 52px;
+        color: #fff;
+        text-align: center;
+        height: 52px;
+        transform: translateY(-50%);
+        border: 2px solid $primary;
+        border-radius: 50%;
+        @include transition;
+        background-color: transparent;
+        &:hover {
+            background-color: $primary-light;
+            border: 2px solid $primary-light;
+        }
+        &-num::before {
+            content: "";
+            min-width: 0%;
+        }
+        &_hide {
+            border: 2px solid $dark-s;
+            color: $dark-s;
+            opacity: 0.35;
+            cursor: default;
+            &:hover {
+                background-color: transparent;
+                border: 2px solid $dark-s;
+                cursor: default !important;
+            }
+        }
+        .slider__pets &,.pagination__item {
+            position: relative;
+            color: $dark-3xl;
+            font-size: 24px;
+          
+        }
+        @media all and (max-width:$tablet){
+            position: static;
+            display: inline-block;
+            margin-right: 38px;
+            margin-left: 38px;
+            margin-top: 45px;
+        }
+    }
+    
+    &__control[data-slide='prev'] {
+        left: 0;
+    }
+    &__control[data-slide='next'] {
+        right: 0;
+    }
+    &__control::before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 6px;
+        background: transparent no-repeat center center;
+        background-size: 100% 100%;
+        color: $dark-3xl;
+    }
+    &__control[data-slide='prev']::before {
+        background-image: url("../../assets/icons/Arrow.svg");
+    }
+    &__control[data-slide='next']::before {
+        background-image: url("../../assets/icons/Arrow-r.svg");
+    }
+    &__item {
+        min-height: 435px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $light-s;
+        padding-bottom: 30px;
+        border-radius: 9px;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+            & {
+                background: $white;
+                box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+            }
+            .slider__link {
+                background-color: $primary-light;
+                border: 2px solid $primary-light;
+            }
+        }
+    }
+    &__title {
+        font-family: 'Georgia';
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        color: $dark-l;
+        margin: 27px auto 30px;
+    }
+    &__link {
+        font-family: 'Georgia';
+        font-size: 17px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: $dark-3xl;
+        border: 2px solid $primary;
+        border-radius: 100px;
+        padding: 13px 42px;
+        text-decoration: none;
+    }
+}
+
+.pagination__item{
+    border: 3px solid $primary;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 17px;
+    &_disabled{
+        border: 3px solid $dark-s;
+        color: $dark-s;
+        &:hover{
+            cursor: default !important;
+        }
+    }
+}
+
+
+.slider__controls,.pagination__container {
+    margin-top: 59px;
+    @media all and (max-width:$desctop){
+        margin-top: 66px;
+    }
+    @media all and (max-width:$tablet){
+        margin-top: 68px;
+    }
+    .pets__page &{
+        @media all and (max-width:$desctop){
+            margin-top: 40px;
+        }
+        @media all and (max-width:$tablet){
+            margin-top: 40px;
+        }
+    }
+    .slider__control, .pagination__item{
+        margin: 0 10px;
+        cursor: pointer;
+        &::before {
+            color: $dark-3xl;
+        }
+        @media all and (max-width:$tablet){
+            margin: 0 5px;
+        }
+    }
+    .slider__control[data-slide='prev']::before {
+        background-image: url("../../assets/icons/arowl.svg");
+        width: 10px;
+        height: 23px;
+        @media all and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+    .slider__control-prev2::before {
+        background-image: url("../../assets/icons/arowll.svg");
+        width: 24px;
+        height: 23px;
+        @media all and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+    .slider__control[data-slide='next']::before {
+        background-image: url("../../assets/icons/arowR.svg");
+        width: 10px;
+        height: 23px;
+        @media all and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+    .slider__control-next2::before {
+        background-image: url("../../assets/icons/arowRR.svg");
+        width: 24px;
+        height: 23px;
+        @media all and (max-width:$tablet){
+            height: 18px;
+        }
+    }
+   
+}
+
+.slider__pets .slider__control-num,.pagination__item_active {
+    background-color: $primary;
+    cursor: default !important;
+
+
+    @media all and (max-width:$tablet){
+        font-size: 19px !important;
+        line-height: 46px !important;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 0%;
+        height: 6px;
+        background: transparent no-repeat center center;
+        background-size: 100% 100%;
+        color: #292929;
+        cursor: default;
+    }
+    
+    &:hover {
+        background-color: $primary;
+        border: 1px solid transparent;
+        cursor: default;
+    }
+  
+}
+
+.item{
+    display: grid;
+    transition: 0.5s ease all;
+    grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr) minmax(270px, 1fr);
+    grid-auto-flow: column;
+    grid-column-gap: 90px;
+}
+
+@keyframes move-right{
+    from{ left:-1080px;}
+    to{left:-2160px;}
+}
+
+.transition-right{
+    animation-name: move-right;
+    animation-duration: 2s;
+}
+
+@keyframes move-left{
+    from{ left:-1080px;}
+    to{left:0}
+}
+
+.transition-left{
+    animation-name: move-left;
+    animation-duration: 2s;
+}
+
+.card__item_visible{
+    animation: scale 1s linear 1;
+    display: flex;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
