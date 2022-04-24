@@ -1,3 +1,14 @@
+.header{
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    &-active{
+        height: 100%;
+    }
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -17,6 +28,9 @@
         .nav__logo-subtitle {
             color: $dark-3xl;
         }
+        .nav__menu{
+           background-color: $white;
+        }
         .nav__menu-link {
             color: $dark-l;
             &:hover {
@@ -28,16 +42,13 @@
         }
     }
     &__logo {
+        animation-name: logo;
+        animation-duration: 1s;
         &-active{
             position: absolute;
             z-index: 10;
-            left: 43px;
             top: 31px;
-            @media all and (max-width:$mobile2){
-                
-                left: 10px;
-            }
-           
+            left: 10px;
         }
         &-title {
             @include logo-title;
@@ -54,33 +65,24 @@
         display: flex;
         list-style: none;
         padding-top: 15px;
-
         @media all and (max-width:$tablet){
-            display: none;
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            display: flex;
+            position: fixed;
+            width: 320px;
+            height: 100vh;
             margin: 0;
-            z-index: 5;
-            padding: 0;
-            right: -300%;
+            z-index: 7;
+            padding-top: 250px;
+            right: -320px;
             top: 0;
             background: #292929;
-            transition:1s ease all;
             flex-direction: column;  
-            padding-top: 250px;
+            transition: 1s all ease;
+            padding-left: 0;
         }
         &-active{
-            display: flex;
             right: 0;
-            left: 34px;
-            @media all and (max-width:$mobile2){
-                left: 0;
-                
-            }
-         
-        }
-   
+        }   
         &-item {
             margin-left: 36px;
             @media all and (max-width:$tablet){
@@ -119,24 +121,27 @@
         width: 30px;
         background-repeat: no-repeat;
         background-position: center;
-        margin-top: 18px;
-        margin-right: 43px;
-        @include transition;
+        transition: 1s all ease;
+        position: absolute;
+        top:49px;
+        right: 53px;
+        z-index: 5;
         &-black{
-            svg line{
-                stroke: #000;
-            }
+            background-image: url('../../assets/icons/Burger-black.svg');
         }
-        &-active{
-            position: absolute;
-            z-index: 10;
-            top: 31px;
-            height: 22px;
-            right: 11px;
-            transform: rotate(90deg);
-        }
+       
         @media all and (max-width:$tablet){
             display: block;
+            height: 22px;
+            &-active{
+                height: 22px;
+                position: fixed;
+                z-index: 20;
+                top:49px;
+                right: 53px;
+                transform: rotate(90deg);
+                z-index: 15;
+            }
         }
     }
 }
@@ -149,24 +154,24 @@
     top: 0;
     &-active{
         position: static;
-        .nav__logo-title{
-            color: $primary;
-        }
-        .nav__logo-subtitle{
-            color: $light-xl;
-        }
-        .nav__menu-link {
-            color: $dark-s;
-        }
-        .nav__menu-link.active {
-            color: $light-s;
-        }
-        .nav__burger-black{
-            svg line{
-                stroke: $primary;
-            }
-        }
     }
-   
 }
 
+@keyframes slide-in {
+    from{
+        right: -320px;
+    }
+    to { right: 0; }
+}
+
+.nav__logo-active{
+    animation-name: logo;
+    animation-duration: 1s;
+}
+
+@keyframes logo {
+    from{
+        transform: scale(0);
+    }
+    to {   transform: scale(1);}
+}
