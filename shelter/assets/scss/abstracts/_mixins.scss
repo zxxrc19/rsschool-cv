@@ -1,0 +1,135 @@
+@mixin h2 {
+    font: {
+        family: 'Georgia';
+        size: 44px;
+        weight: 400;
+    }
+    line-height: 130%;
+    color: $grey;
+    @media all and (max-width:$tablet){
+        font-size: 25px;
+    }
+}
+
+@mixin h3 {
+    font: {
+        family: 'Georgia';
+        size: 35px;
+        weight: 400;
+    }
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $grey;
+    @media all and (max-width:$tablet){
+        font-size: 25px;
+    }
+}
+
+@mixin h3-mobile {
+    font: {
+        family: 'Georgia';
+        size: 25px;
+        weight: 400;
+    }
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $grey;
+}
+
+@mixin h4 {
+    font: {
+        family: 'Georgia';
+        size: 20px;
+        weight: 400;
+    }
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: $grey;
+    @media all and (max-width:$tablet){
+        font-size: 15px;
+        line-height: 110%;
+    }
+}
+
+@mixin h5 {
+    font: {
+        family: 'Georgia';
+        size: 15px;
+        weight: 400;
+    }
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $grey;
+    @media all and (max-width:$tablet){
+        font-size: 15px;
+        line-height: 160%;
+    }
+}
+
+@mixin h5-modal {
+    font: {
+        family: 'Georgia';
+        size: 15px;
+        weight: 400;
+    }
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $grey;
+}
+
+@mixin paragraph-l {
+    font: {
+        family: 'Arial';
+        size: 15px;
+        weight: 400;
+    }
+    line-height: 160%;
+    color: $grey;
+}
+
+@mixin paragraph-s {
+    font: {
+        family: 'Arial';
+        size: 12px;
+        weight: 400;
+    }
+    line-height: 150%;
+    color: $grey;
+    font-style: italic;
+}
+
+@mixin paragraph-mobile-menu {
+    font: {
+        family: 'Arial';
+        size: 32px;
+        weight: 400;
+    }
+    line-height: 160%;
+    color: $grey;
+}
+
+@mixin logo-title {
+    font: {
+        family: 'Georgia';
+        size: 32px;
+        weight: 400;
+    }
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $grey;
+}
+
+@mixin logo_subtitle {
+    font: {
+        family: 'Arial';
+        size: 13px;
+        weight: 400;
+    }
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: $grey;
+}
+
+@mixin transition {
+    transition: .5s ease all;
+}

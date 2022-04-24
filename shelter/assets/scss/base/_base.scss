@@ -1,0 +1,68 @@
+body{
+    font-family: Georgia, Arial, serif;
+    position: relative;
+
+}
+body.scrool{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.unscrollable {
+    overflow-y: hidden;
+}
+
+._container{
+    padding: 0 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    @media all and (max-width:$desctop){
+        width:100%;
+        padding: 0 30px;
+    }
+    @media all and (max-width:$tablet){
+        width:100%;
+        padding: 0 10px;
+    }
+}
+
+h2{
+    @include h2;
+}
+
+
+h3{
+    @include h3;
+}
+
+h4{
+    @include h4;
+}
+
+h5{
+    @include h5;
+}
+
+p{
+    @include paragraph-l;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    &__active {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
