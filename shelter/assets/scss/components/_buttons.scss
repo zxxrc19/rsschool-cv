@@ -15,10 +15,10 @@
         background-color: $primary-light;
     }
     .main__body & {
-        margin-top: 43px;
+        margin-top: 44px;
         max-width: 207px;
         @media all and (max-width:$desctop){
-            margin: 43px auto;
+            margin: 45px auto;
         }
     }
     .pets-container & {
